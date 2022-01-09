@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css" />
+    <script src="test.js" defer></script>
+  </head>
+  <body>
+    <section class ="hide">
+      <h1 id="welcome">Welcome To Tic vs Tac vs Toe</h1>
+      <div Class= "menu show">
+        <button class = "next" id="createBtn">Create</button>
+        <button class = "join" id="joinMethod">Join</button>
+      </div>
+      <div Class= "menu">
+        <button class = "next host" id="btnHost">Host</button>
+        <button class = "next local" id="btnLocal">Local</button>
+      </div>
+      <div Class= "menu">    
+        <button class = "next advanced" id="btnAdvanced">Advanced</button>
+        <button class = "next classic" id="btnClassic">Classic</button>
+      </div>
+      <div Class= "menu">
+        <button class = "next two" id="btnTwo">2 Players</button>
+        <button class = "next three" id="btnThree">3 Players</button>
+      </div>
+      <div class="create menu">
+        <button class = "create" id="btnCreate">Create Lobby</button>
+      </div>
+      <div class="join menu">
+        <button id="btnJoin">Connect</button>
+        <input type="text" id="txtGameId" placeholder= "Room Code"/>
+      </div>
+      <div id="divPlayers"></div>
+    </section>
+    <div class="Main">
+      <div class="nest" id="nest">
+        <div class="node">
+          <div class="board A">
+            <div class="cell one " ></div>
+            <div class="cell two " ></div>
+            <div class="cell three " ></div>
+            <div class="cell four" ></div>
+            <div class="cell five" ></div>
+            <div class="cell six" ></div>
+            <div class="cell seven" ></div>
+            <div class="cell eight" ></div>
+            <div class="cell nine" ></div>
+          </div>
+        </div>
+        <div class="node" >
+            <div class="board B" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        <div class="node" >
+            <div class="board C" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+          </div>
+        </div>
+        <div class="node" >
+            <div class="board D" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        <div class="node" >
+            <div class="board E" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        <div class="node" >
+            <div class="board F" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        <div class="node" >
+            <div class="board G" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        <div class="node" >
+            <div class="board H">
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        <div class="node" >
+            <div class="board I" >
+              <div class="cell one" ></div>
+              <div class="cell two" ></div>
+              <div class="cell three" ></div>
+              <div class="cell four" ></div>
+              <div class="cell five" ></div>
+              <div class="cell six" ></div>
+              <div class="cell seven" ></div>
+              <div class="cell eight" ></div>
+              <div class="cell nine" ></div>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="restartButton">Restart</button>
+    </div>
+  </body>
+</html>
