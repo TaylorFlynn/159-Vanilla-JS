@@ -3,6 +3,7 @@ const app = require("express")();
 const websocketServer = require("websocket").server
 const mongoose = require('mongoose');
 const Game = require('./DatabaseModels/gameState')
+const PORT = process.env.PORT || 9091
 
 //Hashmap Clients
 const connections = new Map();
@@ -18,12 +19,12 @@ db.once('open', () => {
 
 app.get("/", (req,res)=> res.sendFile(__dirname + "/test.html"))
 app.get("/test.css", (req,res)=> res.sendFile(__dirname + "/test.css"))
-app.get("/test.js", (req,res)=> res.sendFile(__dirname + "/Client.js"))  
+app.get("/Client.js", (req,res)=> res.sendFile(__dirname + "/Client.js"))  
 app.get(`/:lobby`, (req,res)=> res.sendFile(__dirname + `/test.html`))
 
 const httpServer = http.createServer();
 httpServer.listen(9090, () => console.log("Http Listening on port 9090"))
-app.listen(9091, ()=>console.log("App Listening on port 9091"))
+app.listen(PORT, ()=>console.log(`App Listening on Port: ${PORT}`))
 
 const wsServer = new websocketServer({
     "httpServer": httpServer
